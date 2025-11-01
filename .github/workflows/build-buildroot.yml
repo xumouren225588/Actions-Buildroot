@@ -41,7 +41,6 @@ jobs:
         sudo apt-get autoremove --purge
         sudo apt-get clean
         sudo apt-get install bison linux-headers-$(uname -r)
-        sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
 

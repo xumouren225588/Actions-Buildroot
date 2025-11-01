@@ -1,9 +1,7 @@
 name: Build Buildroot
 
 on:
-  repository_dispatch:
-  release:
-    types: published
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -16,10 +14,10 @@ on:
 
 env:
   REPO_URL: https://github.com/buildroot/buildroot
-  REPO_BRANCH: 2020.05.x
+  REPO_BRANCH: 2025.02.x
   CONFIG_FILE: .config
-  SSH_ACTIONS: false
-  UPLOAD_BIN_DIR: false
+  SSH_ACTIONS: true
+  UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
